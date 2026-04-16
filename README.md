@@ -2,6 +2,27 @@
 
 將 HackMD 個人筆記下載為本地 `.md` 檔案，供 Obsidian 或 LLM 讀取使用。
 
+## 使用情境
+
+```mermaid
+flowchart TD
+    A([💡 靈感 / 學習 / 會議]) --> B[在 HackMD 寫筆記]
+    B --> C[(HackMD Cloud\n個人筆記庫)]
+
+    C -->|hackmd_sync.py\npython3 hackmd_sync.py| D[本地 .md 檔案\nhackmd_notes/]
+
+    D --> E([Obsidian\n閱讀 / 整理 / 連結])
+    D --> F([LLM / Claude\n分析 / 摘要 / 問答])
+
+    E -->|手動更新| B
+
+    style A fill:#f0f4ff,stroke:#6b7fee
+    style C fill:#e8f5e9,stroke:#43a047
+    style D fill:#fff8e1,stroke:#ffa000
+    style E fill:#fce4ec,stroke:#e91e63
+    style F fill:#f3e5f5,stroke:#8e24aa
+```
+
 ## 環境需求
 
 - Python 3.10+
